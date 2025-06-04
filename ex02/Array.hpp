@@ -2,7 +2,6 @@
 
 #include <cstddef>
 #include <exception>
-#include <iostream>
 template <class T>
 class Array{
 
@@ -15,8 +14,20 @@ class Array{
 		{
 			this->elements = new T[this->s];
 		}
-		// Array(const Array &cpy);
-		// Array operator=(const Array &cpy);
+		Array(const Array &cpy)
+		{
+			this->s = cpy.s;
+			this->elements = new T[this->s];
+			for (int i =0; i < this->s; i++)
+				this->elements[i] = cpy.elements[i];
+		}
+		Array operator=(const Array &cpy)
+		{
+			this->s = cpy.size();
+			this->elements = new T[this->s];
+			for (int i =0; i < this->s; i++)
+				this->elements[i] = cpy[i];
+		}
 		~Array()
 		{
 			delete [] this->elements;

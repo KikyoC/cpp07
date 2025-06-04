@@ -9,8 +9,11 @@ int main(void)
 	
 	try {
 		array[4] = 17;
-		std::cout << "Here i put " << array[4] << std::endl;
+		std::cout << "Here I put " << array[4] << std::endl;
 		std::cout << "This is the size: " << array.size() << std::endl;
+		Array<int> cpy =array;
+		cpy[4] = 1;
+		std::cout << "Hello " << array[4] << std::endl;
 		array[10] = 1;
 	} catch(std::exception &e)
 	{
