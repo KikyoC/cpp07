@@ -1,8 +1,8 @@
 #pragma once
 
 #include <cstddef>
-template <typename T>
-void iter(T *array, int len, void (fct)(T&))
+template <typename T, typename T_function>
+void iter(T *array, int len, T_function &fct)
 {
 	if (array == NULL || fct == NULL)
 		return;
