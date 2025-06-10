@@ -57,5 +57,3 @@ class Array{
 		unsigned int s;
 
 };
-
-// #include "Array.tpp"
