@@ -13,12 +13,14 @@ class Array{
 		Array(unsigned int n): s(n)
 		{
 			this->elements = new T[this->s];
+			for (unsigned int i = 0; i < n; i++)
+				this->elements[i] = 0;
 		}
 		Array(const Array &cpy)
 		{
 			this->s = cpy.s;
 			this->elements = new T[this->s];
-			for (int i =0; i < this->s; i++)
+			for (int i = 0; i < this->s; i++)
 				this->elements[i] = cpy.elements[i];
 		}
 		Array operator=(const Array &cpy)
