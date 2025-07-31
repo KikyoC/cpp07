@@ -14,10 +14,13 @@ void printCharConst(const char &c)
 
 int main()
 {
-	char str[] = "Help";
+	char str[] = {'H', 'e', 'l', 'p'};
+	const char strConst[] = {'H', 'e', 'l', 'p'};
 
 	iter(str, 4, printChar);
 	std::cout << "Ended" << std::endl;
-	iter(str, 4, printCharConst);
+	iter(strConst, 4, printCharConst);
+	std::cout << "Ended" << std::endl;
+	iter(str, 4, specialFct);
 	std::cout << "Ended" << std::endl;
 }
